@@ -46,7 +46,20 @@ The following were employed in order to implement the kubernetes features highli
  **project implementatio**
  In order to demonstrate each of the core kubernetes featueres, the project was implemented in phases.
 
- 1. **Service discovery and load balancing:**
-    - To increase the number of instances the `replicas` in the manifest file was increased from 1 to 5
-    - The containers were reached using the loadbalancer ip and the service port
+ 1. **Service discovery and load balancing**
+      - To increase the number of instances the `replicas` in the manifest file was increased from 1 to 5
+      - The service details was gotten with the command `kubectl get service app-srv`. the otuput is shown below
+      - The information needed to access the application externally was revealed with the command `minikube service app-srv --url`
+      - The `url` from the preceeding step was copied to a brower for rendering.
+      - The browser was refreshed at short intervals to simulate traffic distribution across multiple containers.
+      - The command `curl 172.29.185.92:32638` was also used at intervals on the terminal for traffic distribution simulation
+
+        **Observation**
+         The traffic was effectively distributed across the five containers as illustrate below:
+        
+ 2. **Self healing property**
+    A pod was deleted with the command `kubectl delete pod <pod name>
+ 4. **Automated rollouts and rollbacks**
+    
+   
 
