@@ -1,2 +1,2 @@
-# DevOps-projects-containers
-All container projects
+# DevOps-Projects
+A collection of DevOps projects to demonstrate DevOps best practices
